@@ -10,7 +10,7 @@
  *      serving: 0 o 1 (quién saca)
  *  - match.winner:  0 o 1 cuando el partido está 'finished'
  *
- *  - Cada mercado tiene: id único, tab ('partido' | 'sets' | 'juegos' | 'estadisticas'),
+ *  - Cada mercado tiene: id único, tab ('partido' | 'sets' | 'juegos' | 'estadisticas' | 'especiales'),
  *    name, cols (1 o 2) y outcomes. El mercado con `main: true` es el único
  *    que se ve fuera del partido; el resto solo al entrar en él.
  *  - Cada outcome: id único, label, odds (cuota decimal).
@@ -73,7 +73,7 @@ window.CHINIBANK = {
       {
         id: 'handicap', tab: 'juegos', name: 'Hándicap de juegos', cols: 1,
         outcomes: [
-          { id: 'handicap-2', label: 'Palo +7,5 juegos', odds: 1.30, side: 1 }
+          { id: 'handicap-2-45', label: 'Palo +4,5 juegos', odds: 1.40, side: 1 }
         ]
       },
 
@@ -82,6 +82,15 @@ window.CHINIBANK = {
         id: 'aces-palo', tab: 'estadisticas', name: 'Aces de Palo', cols: 1,
         outcomes: [
           { id: 'aces-palo-o', label: 'Palo más de 2,5 aces', odds: 2.00, side: 1 }
+        ]
+      },
+
+      /* ---------- ESPECIALES ---------- */
+      {
+        id: 'pucho', tab: 'especiales', name: 'Chini pucho prepartido', cols: 2,
+        outcomes: [
+          { id: 'pucho-si', label: 'Sí', odds: 1.20, side: 0 },
+          { id: 'pucho-no', label: 'No', odds: 4.20 }
         ]
       }
     ]

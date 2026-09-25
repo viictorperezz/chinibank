@@ -17,7 +17,8 @@
     { id: 'partido', label: 'Partido' },
     { id: 'sets', label: 'Sets' },
     { id: 'juegos', label: 'Juegos' },
-    { id: 'estadisticas', label: 'Aces' }
+    { id: 'estadisticas', label: 'Aces' },
+    { id: 'especiales', label: 'Especiales' }
   ];
 
   /* ---------- Utilidades ---------- */
@@ -297,7 +298,7 @@
         <article class="promo promo--blue">
           <small>La gran ${esc(M.round)}</small>
           <h2>${esc(matchTitle)}</h2>
-          <p>${M.markets.length} mercados disponibles: ganador, sets, hándicap y aces.</p>
+          <p>${M.markets.length} mercados disponibles: ganador, sets, hándicap, aces y especiales.</p>
           <a class="btn btn--sm" href="#/partido">Ver apuestas</a>
         </article>`;
     },
